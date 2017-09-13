@@ -298,7 +298,7 @@ int main() {
               {
                 //check s values greater than mine and the s gap
                 //if our car is within 30 meters, then slow down
-                if((check_car_s > car_s) && ((check_car_s-car_s) < 30))
+                if((check_car_s > car_s) && ((check_car_s-car_s) < 35))
                 {
                   //lower the reference v so we dont hit the car ahead. Could also change lanes.
                     too_close = true;
@@ -340,7 +340,9 @@ int main() {
             
             if (too_close)
             {
+             
               ref_vel -=0.224;
+              
             }
             else
             {
